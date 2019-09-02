@@ -16,7 +16,7 @@ public class ConnectionManager {
             "&amp" +
             "&serverTimezone=UTC";
     private final String USER_NAME = "root";
-    private final String PASSWORD = "password";
+    private final String PASSWORD = "lolkekSql23";
     private static BasicDataSource instance = new BasicDataSource();
 
     public synchronized Connection getConnection() throws SQLException {

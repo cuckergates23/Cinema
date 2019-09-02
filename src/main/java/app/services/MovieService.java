@@ -17,10 +17,10 @@ public class MovieService {
         this.movieDAO = new MovieSqlDAO(transactionManager);
     }
 
-    public Movie get(int userId) {
+    public Movie get(int id) {
         try {
             transactionManager.getConnection();
-            return movieDAO.getMovieById(userId);
+            return movieDAO.getMovieById(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;

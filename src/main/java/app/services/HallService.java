@@ -16,10 +16,10 @@ public class HallService {
         this.hallDAO = new HallSqlDAO(transactionManager);
     }
 
-    public Hall get(int userId) {
+    public Hall get(int id) {
         try {
             transactionManager.getConnection();
-            return hallDAO.getHallById(userId);
+            return hallDAO.getHallById(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;

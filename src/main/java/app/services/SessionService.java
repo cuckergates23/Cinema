@@ -17,10 +17,10 @@ public class SessionService {
         this.sessionDAO = new SessionSqlDAO(transactionManager);
     }
 
-    public Session get(int userId) {
+    public Session get(int id) {
         try {
             transactionManager.getConnection();
-            return sessionDAO.getSessionById(userId);
+            return sessionDAO.getSessionById(id);
         } catch (SQLException e) {
             e.printStackTrace();
             return null;
@@ -39,6 +39,5 @@ public class SessionService {
         } finally {
             transactionManager.stopConnection();
         }
-
     }
 }
